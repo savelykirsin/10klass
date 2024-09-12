@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Фанфики про Лунтика</title>
+</head>
+<body>
+<h1>Фанфики про Лунтика</h1>
+     <img style="height: 300px;" src="/static/durov.png"/>
+   <h3 style="text-align: center;"><b>ФАНФИКИ</b></h3><br/>
+
+
+<h4>
+{% for fanfic in fanfics %}
+    {{ fanfic['name'] }}
+    {{ fanfic['likes'] }}
+    {% if fanfic['likes']>99 %}
+        <img style="height: 20px;" src="/static/icons8-fire-48.png"/>
+        <br/>
+    {% else %}
+        <br/>
+    {% endif %}
+    {{ fanfic['text'] }}<br/>
+{% endfor %}
+
+</h4>
+
+
+</body>
+</html>
